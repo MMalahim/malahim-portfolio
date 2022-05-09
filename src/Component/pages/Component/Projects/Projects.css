@@ -1,0 +1,69 @@
+.Projects{
+    width: 100%;
+}
+
+.Projects h4{
+    color: #939191;
+    margin-bottom: 0;
+    text-align: center;
+}
+.Projects h3{
+    color: #fff;
+    font-size: 20px;
+}
+
+.Projects .Projects_Grid{
+    display: grid;
+    grid-template-columns: 33.33fr 33.33fr 33.33fr;
+    grid-column-gap: 40px;
+    margin: 20px; 
+}
+
+
+.Projects .Projects_Grid .Projects_container{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.Projects .Projects_Grid .Projects_container .Projects_image{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.Projects .Projects_Grid .Projects_container .Projects_image img{
+    width: 100%;
+    height: 200px;
+    transition: 0.5s;
+    transform: scale(1);
+    border-radius: 5px 5px 0 0 ;
+}
+.Projects .Projects_Grid .Projects_container:hover .Projects_image img{
+    transform: scale(1.1);
+}
+
+.Projects .Projects_Grid .Projects_container .hr-line{
+    width: 100%;
+    height: 4px;
+    background-color: #FFB400;
+}
+
+.Projects .Projects_Grid .Projects_container .Projects_decs{
+    background-color: #252525;
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+    height: 200px;
+}
+
+
+.Projects .Projects_Grid .Projects_container .Projects_decs h5{
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.Projects .Projects_Grid .Projects_container .Projects_decs p{
+    margin-bottom: 0;
+    color: #fff;
+}

@@ -1,0 +1,46 @@
+.My_Skills h4{
+    color: #939191;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.My_Skills .Skills {
+    display: grid;
+    grid-template-columns: 25fr 25fr 25fr 25fr;
+    grid-gap: 30px;
+    margin: 30px 10px;
+}
+
+.My_Skills .Skills .box{
+    border: 1px solid #222222;
+    width: 100%;
+    padding: 20px;
+}
+
+.My_Skills .Skills .Progress_bar {
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background-color: #222222;
+}
+
+.My_Skills .Skills .Progress_bar .Status_bar{
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background-color: #FFB400;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.My_Skills .Skills .box h5{
+    margin-bottom: 0;
+    color: #939191;
+}
+
+.My_Skills .Skills .box p{
+    color: #939191;
+    margin-bottom: 0;
+}

@@ -1,0 +1,160 @@
+.Home{
+    width: 100%;
+    height: 100vh;
+    background-color: #111111;
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+}
+
+.Home .Left{
+    position: relative;
+}
+
+.Home .Left .left_design{
+    position: fixed;
+    width: 400px;
+    height: 100vh;
+    left: -100px;
+    top: 0;
+    background-color: #FFB400;
+    transform: skew(12deg);
+}
+
+.Home .Left .Picture{
+    position: absolute;
+    width: 60%;
+    height: calc( 100vh - 80px );
+    /* background-image: url('../../../Images/profile.jpg'); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 40px;
+    left: 40px;
+    background-color: black;
+    border-radius: 30px;
+    box-shadow: 0 0 7px rgb(0 0 0 / 90%);
+}
+
+.Home .Right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 0;
+} 
+
+.Home .Right .Text .line{
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #FFB400;
+    margin: auto 0;
+}
+
+.Home .Right .Text .H1_1{
+    color: #FFB400;
+    font-weight: bolder;
+    margin-left: 25px;
+}
+
+.Home .Right .Text .H1_2{
+    color: #fff ;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    margin-left: 55px;
+}
+
+.Home .Right .Text p{
+    color: #fff;
+    font-size: 18px;
+    width: 600px;
+}
+
+.Home .Right .Text .button{
+    border: 1px solid #ffb400;
+    overflow: hidden;
+    border-radius: 35px;
+    text-align: center;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: all .25s ease-in-out;
+    position: relative;
+    z-index: 1;
+    padding: 16px 70px 16px 35px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #fff;
+    background-color: transparent;
+    outline: none!important;
+    cursor: pointer!important;
+}
+.Home .Right .Text .button:hover:before{
+    transform: translateX(0);
+}
+
+.Home .Right .Text .button::before{
+    background-color: #FFB400;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: all .3s ease-out;
+
+}
+
+.Home .Right .Text .button .button-text{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    transition: all .3s ease-out;
+}
+
+
+.Home .Right .Text .button .button-icon {
+    background-color: #FFB400;
+    position: absolute;
+    right: -1px;
+    top: 0;
+    bottom: 0;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.Home .Right .NavBar{
+    position: fixed;
+    padding: 10px;
+    z-index: 1000;
+    right: 30px;
+}
+
+.Home .Right .NavBar .NavLinks {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(49, 49, 49);
+    border-radius: 50%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.Home .Right .NavBar .NavLinks:hover {
+    background-color: #FFB400;
+}
+
+
+.Home .Right .NavBar .NavLinks i{
+    color: #fff;
+    font-size: 18px;
+}

@@ -1,0 +1,59 @@
+.Certificate h4{
+    color: #939191;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.Certificate .Certificate_Div .Certificate_Grid{
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+    margin: 35px 0 20px 0;
+}
+
+.Certificate .Certificate_Div .Certificate_Grid .LeftGrid{
+    display: grid;
+    grid-template-columns: 15fr 85fr;
+}
+
+.Certificate .Certificate_Div .Certificate_Grid .circle{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #FFB400;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Certificate .Certificate_Div .Certificate_Grid .circle i{
+    color: #fff;
+    font-size: 20px;
+}
+
+.Certificate .Certificate_Div .Certificate_Grid .line{
+    width: 2px;
+    height: 100px;
+    background-color: #FFB400;
+    margin: 0 auto;
+}
+
+.Certificate .Certificate_Div .Certificate_Grid .timeperiod{
+    padding:  2px 10px;
+    background-color: #212121;
+    width: max-content;
+    border-radius: 20px;
+    margin: 10px 0;
+}
+
+.Certificate .Certificate_Div .Certificate_Grid .timeperiod p{
+    color: rgb(197, 197, 197);
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+.Certificate .Certificate_Div .Certificate_Grid h5{
+    color: rgb(197, 197, 197) ;
+    margin-bottom: 0;
+    margin: 20px 0 15px 0;
+}
