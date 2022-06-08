@@ -56,7 +56,7 @@ const Modal = () => {
                     },
                     {
                         left: 'Linkedin',
-                        right: 'malahim/linkedin'
+                        right: 'https://www.linkedin.com/in/muhammad-malahim-314846142'
                     },
 
                 ]
@@ -112,7 +112,7 @@ const Modal = () => {
             <div className="Modal" id="Modal">
 
                 <div className='Modal_Content'>
-                    <div className='cross' onClick={cancle}><i class="las la-times"></i></div>
+                    {/* <div className='cross' onClick={cancle}><i class="las la-times"></i></div> */}
 
 
                     <div className='Heading'>
@@ -155,7 +155,13 @@ const Modal = () => {
                                                     <>
                                                         <div className='d-flex align-items-center my-4'>
                                                             <h6>{val.left} : </h6>
-                                                            <p>{val.right}</p>
+                                                            {
+                                                                val.left === 'Linkedin'
+                                                                    ?
+                                                                    <a href="https://www.linkedin.com/in/muhammad-malahim-314846142" target="_blank">{val.right}</a>
+                                                                    :
+                                                                    <p>{val.right}</p>
+                                                            }
                                                         </div>
                                                     </>
                                                 )
@@ -196,31 +202,31 @@ const Modal = () => {
 
                     {/* SKILLS */}
 
-                    <Skills/>
+                    <Skills />
 
                     <div className='Hr_Line'></div>
 
                     {/* EXPERIENCE */}
 
-                    <Experience/>
+                    <Experience />
 
                     <div className='Hr_Line'></div>
 
                     {/* EDUCATION */}
 
-                    <Education/>
+                    <Education />
 
                     <div className='Hr_Line'></div>
 
                     {/* Projects */}
 
-                    <Projects/>
+                    <Projects />
 
                     <div className='Hr_Line'></div>
 
                     {/* Certificate */}
 
-                    <Certificate/>
+                    <Certificate />
 
                     <div className='Hr_Line'></div>
 

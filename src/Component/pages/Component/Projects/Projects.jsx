@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import './Projects.css';
 
-import projectImg from '../../../../Images/project.jpg'
-import projectImg1 from '../../../../Images/project1.jpg'
-import projectImg2 from '../../../../Images/project2.jpg'
+import projectImg from '../../../../Images/project/project.jpg'
+import projectImg1 from '../../../../Images/project/project1.jpg'
+import projectImg2 from '../../../../Images/project/project2.jpg'
 
 const Projects = () => {
 
@@ -19,7 +19,10 @@ const Projects = () => {
                     {
                         fypImg: projectImg,
                         fypTitle: 'GSM and IoT based Smart Traffic System with Geofencing',
-                        fypDesc: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface',
+                        fypDesc: '- A Funded project by Ignite iot.',
+                        fypDesc1:'- Developed React Native Application for Android and iOS.',
+                        fypDesc2:'- Hardware components ( RFID tags, Magnetometer, Arduino mega ).',
+                        fypDesc3:'- A prototype project submitted to University',
                     },
                 ]
             )
@@ -29,22 +32,25 @@ const Projects = () => {
                     {
                         projectimg: projectImg1,
                         projectTitle: 'Employment Management System',
-                        projectDesc: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface',
+                        projectDesc: '- Database on Xampp( My SQL)',
                     },
                     {
                         projectimg: projectImg,
                         projectTitle: 'Library Management System',
-                        projectDesc: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface',
+                        projectDesc: '- Java coding on Netbeans IDE',
                     },
                     {
                         projectimg: projectImg2,
                         projectTitle: '100 Watt Inverter',
-                        projectDesc: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface',
+                        projectDesc: '- PCB Board Designing and Soldering.',
+                        projectDesc1: '- Certificate on Presenting ( Hamdard University Project Exhibition - 2018).',
                     },
                     {
                         projectimg: projectImg,
                         projectTitle: 'School Management System',
-                        projectDesc: 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface',
+                        projectDesc: '- C++ Coding on Visual Studio IDE',
+                        projectDesc1: '- Storing records of Students, Faculty and Staff',
+                        projectDesc2: '- Security Mechanism', 
                     },
                 ]
             )
@@ -80,6 +86,9 @@ const Projects = () => {
 
                                                     <h5>{val.fypTitle}</h5>
                                                     <p>{val.fypDesc}</p>
+                                                    <p>{val.fypDesc1}</p>
+                                                    <p>{val.fypDesc2}</p>
+                                                    <p>{val.fypDesc3}</p>
 
                                                 </div>
                                             </div>
@@ -115,6 +124,8 @@ const Projects = () => {
 
                                                     <h5>{val.projectTitle}</h5>
                                                     <p>{val.projectDesc}</p>
+                                                    <p>{val.projectDesc1}</p>
+                                                    <p>{val.projectDesc2}</p>
 
                                                 </div>
 

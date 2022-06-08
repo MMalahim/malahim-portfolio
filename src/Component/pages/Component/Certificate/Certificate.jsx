@@ -13,12 +13,14 @@ const Certificate = () => {
                     {
                         certificateYear: '2018',
                         certificateTitle: 'WEB DEVELOPMENT - SIR SYED UNIVERSITY',
-                        decs: 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.',
+                        decs: '- Learning HTML, CSS and JavaScript From Sir Syed University',
+                        icon: 'las la-certificate',
                     },
                     {
                         certificateYear: '2019',
                         certificateTitle: 'WEB ENGINEER - IEEE',
                         decs: 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.',
+                        icon: 'las la-certificate',
                     },
                 ]
             )
@@ -43,7 +45,7 @@ const Certificate = () => {
                                         <>
                                             <div className="LeftGrid">
                                                 <div>
-                                                    <div className="circle"><i class="las la-briefcase"></i></div>
+                                                    <div className="circle"><i class={val.icon}></i></div>
                                                     <div className="line"></div>
                                                 </div>
                                                 <div>

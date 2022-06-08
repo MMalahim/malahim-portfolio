@@ -24,7 +24,7 @@
     position: absolute;
     width: 60%;
     height: calc( 100vh - 80px );
-    /* background-image: url('../../../Images/profile.jpg'); */
+    background-image: url('../../../Images/profile.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     top: 40px;
@@ -157,4 +157,40 @@
 .Home .Right .NavBar .NavLinks i{
     color: #fff;
     font-size: 18px;
+}
+
+.Tooltip {
+    position:relative;
+}
+
+.Tooltip:before {
+    content: attr(data-text);
+    position:absolute;
+    top:0;
+    left:-120px;
+    width:100px;
+    padding:10px;
+    border-radius:10px;
+    background:#FFB400;
+    color: #fff;
+    text-align:center;
+    font-weight: bold;
+  
+    display:none;
+}
+
+.Tooltip::after {
+    content: "";
+    position:absolute;
+    top:16px;
+    transform: rotate(45deg);
+    left:-25px;
+    width:10px;
+    height: 10px;
+    background: #FFB400;
+    display:none;
+}
+
+.Tooltip:hover:before, .Tooltip:hover::after {
+    display:block;
 }

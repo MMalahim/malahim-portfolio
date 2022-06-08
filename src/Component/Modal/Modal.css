@@ -124,6 +124,19 @@
     color: #fff;
 }
 
+.Modal .Modal_Content .Info_Grid .Personal_Info .inner_grid a{
+    margin-bottom: 0;
+    margin-left: 5px;
+    color: #fff;
+    transition: 0.3s;
+    word-break: break-all;
+    width: 70%;
+}
+.Modal .Modal_Content .Info_Grid .Personal_Info .inner_grid a:hover{
+    opacity: 0.7;
+}
+
+
 .Modal .Modal_Content .Info_Grid .Personal_Info .button{
     border: 1px solid #ffb400;
     overflow: hidden;
@@ -232,4 +245,19 @@
     height: 1px;
     background-color: #555555;
     margin: 40px auto 20px auto;
+}
+
+@media only screen and (max-width: 1700px) {
+    .Modal .Modal_Content{
+        width: 90%;
+        height: 80%;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .Modal .Modal_Content{
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
 }

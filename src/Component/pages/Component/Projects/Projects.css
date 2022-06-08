@@ -52,7 +52,7 @@
     background-color: #252525;
     padding: 20px;
     border-radius: 0 0 5px 5px;
-    height: 200px;
+    /* height: 200px; */
 }
 
 
@@ -66,4 +66,8 @@
 .Projects .Projects_Grid .Projects_container .Projects_decs p{
     margin-bottom: 0;
     color: #fff;
+}
+
+@media only screen and (max-width: 1500px) {
+    
 }

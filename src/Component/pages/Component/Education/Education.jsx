@@ -16,6 +16,7 @@ const Education = () => {
                         designation: 'BE COMPUTER SYSTEM ENGINEERING',
                         startYear: '02/2017',
                         endYear: '03/2021',
+                        icon: 'las la-university' 
                     },
                     {
                         decs: 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.',
@@ -23,6 +24,7 @@ const Education = () => {
                         designation: 'PRE-ENGINEERING',
                         startYear: '2014',
                         endYear: '2016',
+                        icon: 'las la-graduation-cap'
                     },
                     {
                         decs: 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.',
@@ -30,6 +32,7 @@ const Education = () => {
                         designation: 'MATRICULATION',
                         startYear: '2010',
                         endYear: '2014',
+                        icon: 'las la-school'
                     },
                 ]
             )
@@ -54,7 +57,7 @@ const Education = () => {
                                         <>
                                             <div className="LeftGrid">
                                                 <div>
-                                                    <div className="circle"><i class="las la-briefcase"></i></div>
+                                                    <div className="circle"><i class={val.icon}></i></div>
                                                     <div className="line"></div>
                                                 </div>
                                                 <div>

@@ -16,6 +16,7 @@ const Experience = () => {
                         designation: 'REACT JS DEVELOPER',
                         startYear: '08/2021',
                         endYear: 'present',
+                        icon: 'las la-briefcase',
                     },
                     {
                         decs: 'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.',
@@ -23,6 +24,7 @@ const Experience = () => {
                         designation: 'MANUAL TESTER',
                         startYear: '09/2021',
                         endYear: '04/2022',
+                        icon: 'las la-briefcase',
                     },
                 ]
             )
@@ -47,7 +49,7 @@ const Experience = () => {
                                         <>
                                             <div className="LeftGrid">
                                                 <div>
-                                                    <div className="circle"><i class="las la-briefcase"></i></div>
+                                                    <div className="circle"><i class={val.icon}></i></div>
                                                     <div className="line"></div>
                                                 </div>
                                                 <div>

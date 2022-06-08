@@ -1,31 +1,67 @@
 import React, { useState } from "react";
 import './Contact.css';
 
-import ReactJsAlert from "reactjs-alert";
+import axios from "axios";
+
 
 const Contact = () => {
 
-    const [status, setStatus] = useState(false);
-    const [type, setType] = useState("");
-    const [title, setTitle] = useState("");
-    const success = () => {
-        setStatus(true);
-        setType("success");
-        setTitle("This is a success alert");
+    const [Form, setForm] = useState({
+        full_name: '',
+        email: '',
+        subject: '',
+        message: '',
+    });
+
+    const OnChangeHandler = (e) => {
+        const { value, name } = e.target;
+
+        let val = {
+            ...Form,
+            [name]: value
+        }
+
+
+        setForm(val);
+    }
+
+
+    const Submit = (e) => {
+
+        e.preventDefault();
+
+        axios.post(
+            'https://portfoliocontact-c33f2-default-rtdb.firebaseio.com/users.json',
+            {
+                full_name: Form.full_name,
+                email: Form.email,
+                subject: Form.subject,
+                message: Form.message
+            }
+        ).then(
+            res => {
+
+                setForm({
+                    full_name: '',
+                    email: '',
+                    subject: '',
+                    message: '',
+                });
+
+            }
+        ).catch(
+            err => {
+
+                console.log(err)
+
+            }
+        )
+
     }
 
     return (
 
         <>
-
-            <ReactJsAlert
-                status={status} // true or false
-                type={type} // success, warning, error, info
-                title={title}
-                quotes={true}
-                quote="This is a dummy design that shows an example of reactjs-alert"
-                Close={() => setStatus(false)}
-            />
 
             <div className="Contact" id='Contact'>
 
@@ -53,7 +89,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h6>ADDRESS POINT</h6>
-                                    <p>123 Stree New York City , United States Of America 750065.</p>
+                                    <p>House No : R-874 Sector 09 North Karachi, Karachi, Pakistan 75850.</p>
                                 </div>
                             </div>
                             <div className="Contact_Info">
@@ -71,38 +107,38 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h6>CALL ME</h6>
-                                    <p>+923422618990</p>
+                                    <p>+92-342-2618990</p>
                                 </div>
                             </div>
 
                             <div className="Contact_links">
-                                <div><i class="lab la-facebook-f"></i></div>
-                                <div><i class="lab la-twitter"></i></div>
-                                <div><i class="lab la-google-plus"></i></div>
-                                <div><i class="lab la-linkedin-in"></i></div>
+                                <a href="https://www.facebook.com/malahim.ayoub" target="_blank"><i class="lab la-facebook-f"></i></a>
+                                <a href="#" target="_blank"><i class="lab la-twitter"></i></a>
+                                <a href="#" target="_blank"><i class="lab la-google-plus"></i></a>
+                                <a href="https://www.linkedin.com/in/muhammad-malahim-314846142" target="_blank"><i class="lab la-linkedin-in"></i></a>
 
                             </div>
                         </div>
 
-                        <div className="Contact_Form">
+                        <form className="Contact_Form" onSubmit={Submit} >
                             <div className="input_grid">
-                                <input type="text" placeholder="YOUR NAME" />
-                                <input type="text" placeholder="YOUR EMAIL" />
+                                <input type="text" placeholder="YOUR NAME" onChange={OnChangeHandler} name='full_name' value={Form.full_name} required />
+                                <input type="text" placeholder="YOUR EMAIL" onChange={OnChangeHandler} name='email' value={Form.email} required />
                             </div>
 
                             <div className="py-3">
-                                <input type="text" placeholder="YOUR SUBJECT" />
+                                <input type="text" placeholder="YOUR SUBJECT" onChange={OnChangeHandler} name='subject' value={Form.subject} required />
                             </div>
 
                             <div className="my-3">
-                                <textarea placeholder="YOUR MESSAGE" name="" id="" cols="30" rows="5"></textarea>
+                                <textarea placeholder="YOUR MESSAGE" id="" cols="30" rows="5" onChange={OnChangeHandler} name='message' value={Form.message} required></textarea>
                             </div>
 
-                            <button className="button" style={{ cursor: "none" }} onClick={success}>
+                            <button className="button" type="submit" style={{ cursor: "none" }}>
                                 <span className="button-text">SEND MESSAGE</span>
                                 <span className="button-icon"><i class="las la-paper-plane"></i></span>
                             </button>
-                        </div>
+                        </form>
 
                     </div>
 

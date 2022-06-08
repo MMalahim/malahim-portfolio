@@ -20,9 +20,27 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 8px;
     position: relative;
-    padding: 0 20px;
+    padding: 0 50px;
     overflow-y: auto;
 }
+
+/* width */
+.MyWork .MyWork_Content::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  /* Track */
+  .MyWork .MyWork_Content::-webkit-scrollbar-track {
+    background: #333333; 
+    border-radius: 0 5px 5px 0;
+  }
+   
+  /* Handle */
+  .MyWork .MyWork_Content::-webkit-scrollbar-thumb {
+    background: #555555; 
+    border-radius: 5px;
+  }
 
 .MyWork .MyWork_Content .Heading{
     display: flex;
@@ -57,4 +75,50 @@
     font-size: 125px;
     font-weight: bolder;
     color: #222222;
+}
+
+.MyWork .MyWork_Content .MyWork_Grid{
+    display: grid;
+    grid-template-columns: 33.33fr 33.33fr 33.33fr;
+    grid-gap: 30px;
+    margin-bottom: 30px;
+}
+
+
+.MyWork .MyWork_Content .MyWork_Grid div{
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+}
+
+.MyWork .MyWork_Content .MyWork_Grid div img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+.MyWork .MyWork_Content .MyWork_Grid div .work_desc{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.MyWork .MyWork_Content .MyWork_Grid div .work_desc h4{
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.MyWork .MyWork_Content .MyWork_Grid div:hover{
+    background-color: #FFB400 ;
+}
+
+.MyWork .MyWork_Content .MyWork_Grid div:hover .work_desc{
+    opacity: 1;
 }

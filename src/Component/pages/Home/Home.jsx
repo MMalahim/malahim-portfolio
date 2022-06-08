@@ -35,6 +35,7 @@ const Home = () => {
     }
 
 
+
     return (
 
 
@@ -61,7 +62,7 @@ const Home = () => {
                             <div className="line"></div>
                             <h1 className="H1_1">Muhammad Malahim</h1>
                         </div>
-                        <h1 className="H1_2">WEB DESIGNER</h1>
+                        <h1 className="H1_2">WEB DEVELOPER</h1>
                         <p>A Computer system Engineer, having commands on web designing & front‑end development. I focused on crafting clean & user‑friendly experiences, I am passionate about building excellent software that improves the lives of those around me.</p>
 
                         <button className="button" style={{ cursor: "none" }} onClick={ OpenModal }>
@@ -73,20 +74,20 @@ const Home = () => {
 
                     <div className="NavBar">
 
-                        <div className="NavLinks" onClick={openHome}>
+                        <div className="NavLinks Tooltip" data-text="Home" onClick={openHome}>
                             <i class="las la-home"></i>
                         </div>
 
-                        <div className="NavLinks" onClick={OpenModal}>
+                        <div className="NavLinks Tooltip" data-text="About" onClick={OpenModal}>
                             <i class="las la-user"></i>
 
                         </div>
 
-                        <div className="NavLinks" onClick={openWork}>
+                        <div className="NavLinks Tooltip" data-text="Portfolio" onClick={openWork}>
                             <i class="las la-briefcase"></i>
                         </div>
 
-                        <div className="NavLinks" onClick={openContact}>
+                        <div className="NavLinks Tooltip" data-text="Contact" onClick={openContact}>
                             <i class="las la-envelope-open"></i>
                         </div>
 
